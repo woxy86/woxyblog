@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block yazi %}
+{% from "includers/formhelper.html" import render_field %}
+<h3>Kayit Olun</h3>
+<hr>
+<form method="post">
+<dl>
+    {{ render_field(form.name,class="form-control",required=False) }}
+    {{ render_field(form.username,class="form-control",required=False) }}
+    {{ render_field(form.email,class="form-control",required=False) }} 
+    {{ render_field(form.password,class="form-control",required=False) }}   
+    {{ render_field(form.confrim,class="form-control",required=False) }}
+    <button type="submit" class="btn btn-success">Kayit Ol</button>
+</dl>
+
+{% block title %}
+<title>Kayit</title>
+{% endblock title %}
+</form>
+{% endblock yazi %}
